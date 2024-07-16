@@ -6,14 +6,12 @@
 /*   By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 23:45:17 by yehara            #+#    #+#             */
-/*   Updated: 2024/07/16 22:19:41 by yehara           ###   ########.fr       */
+/*   Updated: 2024/07/16 22:56:56 by yehara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./printf/ft_printf.h"
-#include <stdlib.h>
 #include <signal.h>
-#include <unistd.h>
 
 static void error_handling(int errno)
 {
@@ -59,7 +57,7 @@ static int check_pid(char *s_pid)
 int main(int argc, char **argv)
 {	
 	size_t i;
-	int len;
+	size_t len;
         pid_t i_pid;
 
 	if (argc != 3)

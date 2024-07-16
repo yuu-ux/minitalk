@@ -6,7 +6,7 @@
 #    By: yehara <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/14 23:16:36 by yehara            #+#    #+#              #
-#    Updated: 2024/07/14 23:16:47 by yehara           ###   ########.fr        #
+#    Updated: 2024/07/16 22:44:26 by yehara           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SERVER_BONUS_NAME = server_bonus
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 
-PRINTF = ft_printf
+PRINTF = printf
 LIBFT = $(PRINTF)/libft
 
 SERVER_SRCS = server.c

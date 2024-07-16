@@ -6,13 +6,12 @@
 /*   By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 13:48:46 by yehara            #+#    #+#             */
-/*   Updated: 2024/07/14 18:06:34 by yehara           ###   ########.fr       */
+/*   Updated: 2024/07/16 22:59:29 by yehara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <errno.h>
 # include <fcntl.h>
 # include <limits.h>
 # include <stddef.h>
