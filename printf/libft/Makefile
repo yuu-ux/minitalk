@@ -6,7 +6,7 @@
 #    By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/23 13:31:55 by yehara            #+#    #+#              #
-#    Updated: 2024/05/12 15:56:20 by yehara           ###   ########.fr        #
+#    Updated: 2024/07/18 03:03:56 by yehara           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,19 +34,19 @@ OBJS = $(SRURCES:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(AR) rcs $@ $^ 
+	@$(AR) rcs $@ $^ 
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 bonus:
 	@$(MAKE) all BFLAGS=1
 	
 clean:
-	$(RM) $(SRCS:.c=.o) $(SRCSB:.c=.o)
+	@$(RM) $(SRCS:.c=.o) $(SRCSB:.c=.o)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
 

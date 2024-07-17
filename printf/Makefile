@@ -6,7 +6,7 @@
 #    By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/12 16:35:15 by yehara            #+#    #+#              #
-#    Updated: 2024/07/14 19:28:36 by yehara           ###   ########.fr        #
+#    Updated: 2024/07/18 03:04:28 by yehara           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,22 +18,22 @@ SRCS	= ft_printf.c ft_printf_char.c ft_printf_dec.c ft_printf_hex.c ft_printf_pt
 OBJS	= ${SRCS:.c=.o}
 
 %.o:%.c
-	${CC} ${FLAGS} -c $< -o $@
+	@${CC} ${FLAGS} -c $< -o $@
 
 ${NAME}: ${OBJS}
-	make -C libft
-	cp ${LIBFT} ${NAME}
-	${AR} rc ${NAME} ${OBJS}
+	@make -C libft
+	@cp ${LIBFT} ${NAME}
+	@${AR} rc ${NAME} ${OBJS}
 
 all: ${NAME}
 
 clean:
-	make clean -C libft
-	${RM} ${OBJS}
+	@make clean -C libft
+	@${RM} ${OBJS}
 
 fclean: clean
-	make fclean -C libft
-	${RM} ${NAME}
+	@make fclean -C libft
+	@${RM} ${NAME}
 
 re: fclean all
 
