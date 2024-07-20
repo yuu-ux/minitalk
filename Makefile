@@ -6,7 +6,7 @@
 #    By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/18 00:42:43 by yehara            #+#    #+#              #
-#    Updated: 2024/07/18 03:08:19 by yehara           ###   ########.fr        #
+#    Updated: 2024/07/18 15:03:07 by yehara           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,5 +39,7 @@ clean:
 fclean: clean
 	make -C $(PRINTF) fclean
 	rm -f $(CLIENT_NAME) $(SERVER_NAME)
+
+re: fclean all
 
 .PHONY: all clean fclean re
