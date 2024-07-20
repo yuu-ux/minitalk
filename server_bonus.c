@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 00:05:45 by yehara            #+#    #+#             */
-/*   Updated: 2024/07/18 15:51:46 by yehara           ###   ########.fr       */
+/*   Updated: 2024/07/21 02:50:45 by yehara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ void	signal_handler(int signum, siginfo_t *info, void *context)
 	if (i < 0)
 	{
 		write(1, &c, 1);
+		if (c == '\0')
+		{
+			if (kill(info->si_pid, SIGUSR2) == -1)
+				ft_printf("kill command error");
+		}
 		c = 0;
 		i = 7;
 	}

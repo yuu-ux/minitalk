@@ -6,7 +6,7 @@
 /*   By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 23:45:17 by yehara            #+#    #+#             */
-/*   Updated: 2024/07/21 01:13:08 by ebarayuug        ###   ########.fr       */
+/*   Updated: 2024/07/21 02:53:56 by yehara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,17 +57,20 @@ static	void	response_handler(int signum, siginfo_t *info, void *context)
 {
 	(void)info;
 	(void)context;
-	if ()
-	write(1, "reserved server", 15);
+	if (signum == SIGUSR2)
+	{
+		write(1, "reserved server", 15);
+		exit(EXIT_SUCCESS);
+	}
 }
 
 int	main(int argc, char **argv)
 {	
-	size_t	i;
-	size_t	len;
-	pid_t	i_pid;
-	struct sigaction sa;
-	
+	size_t				i;
+	size_t				len;
+	pid_t				i_pid;
+	struct sigaction	sa;
+
 	if (argc != 3)
 		error_handling(1);
 	i_pid = check_pid(argv[1]);
@@ -76,7 +79,7 @@ int	main(int argc, char **argv)
 	sa.sa_flags = SA_SIGINFO;
 	sigemptyset(&sa.sa_mask);
 	if (sigaction(SIGUSR1, &sa, NULL) == -1
-		sigaction(SIGUSR2, &sa, NULL) == -1)
+		|| sigaction(SIGUSR2, &sa, NULL) == -1)
 		exit(EXIT_FAILURE);
 	i = 0;
 	while (i <= len)
