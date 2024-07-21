@@ -6,7 +6,7 @@
 /*   By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 23:45:17 by yehara            #+#    #+#             */
-/*   Updated: 2024/07/20 14:27:10 by yehara           ###   ########.fr       */
+/*   Updated: 2024/07/21 16:32:16 by yehara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ static	void	send_bit(pid_t i_pid, char c)
 			sig = SIGUSR1;
 		else
 			sig = SIGUSR2;
-		ft_printf("%d\n", sig);
 		if (kill(i_pid, sig) == -1)
 			error_handling(3);
 		usleep(1000);

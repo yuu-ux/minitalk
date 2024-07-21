@@ -6,7 +6,7 @@
 #    By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/18 00:42:43 by yehara            #+#    #+#              #
-#    Updated: 2024/07/21 03:15:23 by yehara           ###   ########.fr        #
+#    Updated: 2024/07/21 16:58:45 by yehara           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SERVER_NAME = server
 CLIENT_NAME_BONUS = client_bonus
 SERVER_NAME_BONUS = server_bonus
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 PRINTF = printf
